@@ -15,7 +15,7 @@ var ModelView = function(){
     };
 
     this.monsterAttack = function() {
-        this.playerHealth(this.playerHealth()-this.calculateDmg(12,6));        
+        this.playerHealth(this.playerHealth()-this.calculateDmg(14,10));        
     };
 
     this.attack = function(){
@@ -31,7 +31,29 @@ var ModelView = function(){
         this.monsterAttack(); 
     };
 
-    
+    this.specialAttack = function(){
+        this.monsterHealth(this.monsterHealth()-this.calculateDmg(18,10));
+        if (this.monsterHealth()<=0) {
+            if (confirm("You won! New Game?")==true) {
+                this.startGame();
+                return;
+            }
+            this.isRunning(false);
+            return;
+        }        
+        this.monsterAttack();
+    };
+
+    this.heal = function() {
+        if (this.playerHealth()<=92) {
+            this.playerHealth(this.playerHealth()+15);
+            this.monsterAttack();    
+        }
+        else {
+            this.playerHealth(100);
+        }                
+        
+    };
 };
 
 ko.applyBindings(new ModelView());
