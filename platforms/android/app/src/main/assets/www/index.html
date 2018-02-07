@@ -41,7 +41,7 @@
                         <button id="attack" data-bind='click : attack'>ATTACK</button>
                         <button id="special-attack"  data-bind='click : specialAttack'>SPECIAL ATTACK</button>
                         <button id="heal" data-bind='click : heal'> HEAL</button>
-                        <button id="give-up" data-bind='click: giveUp'>GIVE UP</button>
+                        <button id="give-up" data-bind='click: lose'>GIVE UP</button>
                     </div>
                 </section>     
     </div>
@@ -52,22 +52,26 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Photo</a></li>
-              <li><a href="#">Name</a></li>
-              <li><a href="#">Stats</a></li>
+                <li>
+                    <img src="" alt="..."  data-bind='attr: { src:  monsters()[0].photo }'>                  
+                </li>
+                <li> <a href="" data-bind='text: "Name:   " + monsters()[0].name'></a></li>
+                <li> <a href="" data-bind='text: "Atk:   " + monsters()[0].atk'></a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#" data-bind='click: startFight'>Fight!</a></li>
             </ul>
           </div>
-          <div class="dropdown col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="dropdown col-xs-6 col-sm-6 col-md-3 col-lg-3">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Monster 2
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Photo</a></li>
-                <li><a href="#">Name</a></li>
-                <li><a href="#">Stats</a></li>
+                <li>
+                    <img src="" alt="..."  data-bind='attr: { src:  monsters()[1].photo }'>                  
+                </li>
+                <li> <a href="" data-bind='text: "Name:   " + monsters()[1].name'></a></li>
+                <li> <a href="" data-bind='text: "Atk:   " + monsters()[1].atk'></a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#" data-bind='click: startFight'>Fight!</a></li>
             </ul>
@@ -80,9 +84,11 @@
             <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Photo</a></li>
-                <li><a href="#">Name</a></li>
-                <li><a href="#">Stats</a></li>
+                <li>
+                    <img src="" alt="..."  data-bind='attr: { src:  monsters()[2].photo }'>                  
+                </li>
+                <li> <a href="" data-bind='text: "Name:   " + monsters()[2].name'></a></li>
+                <li> <a href="" data-bind='text: "Atk:   " + monsters()[2].atk'></a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#" data-bind='click: startFight'>Fight!</a></li>
             </ul>
@@ -93,13 +99,16 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Photo</a></li>
-                <li><a href="#">Name</a></li>
-                <li><a href="#">Stats</a></li>
+                <li>
+                    <img src="" alt="..."  data-bind='attr: { src:  monsters()[3].photo }'>                  
+                </li>
+                <li> <a href="" data-bind='text: "Name:   " + monsters()[3].name'></a></li>
+                <li> <a href="" data-bind='text: "Atk:   " + monsters()[3].atk'></a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#" data-bind='click: startFight'>Fight!</a></li>
             </ul>
           </div>  
+            
         
     </div>      
 </div>

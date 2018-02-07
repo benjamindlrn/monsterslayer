@@ -19,7 +19,7 @@ var ModelView = function(){
         this.playerHealth(100);
         this.monsterHealth(100);
     };
-    this.giveUp = function(){
+    this.lose = function(){
         this.experience(0);
         this.isFighting(false);
         this.level(1);
@@ -42,8 +42,7 @@ var ModelView = function(){
         this.monsterAttack(); 
         if (this.playerHealth()<=0) {
             alert("You lose... Try again!!");
-            this.experience(0);
-            this.isFighting(false);
+            this.lose();
         }  
     };
 
@@ -58,8 +57,7 @@ var ModelView = function(){
         this.monsterAttack(); 
         if (this.playerHealth()<=0) {
             alert("You lose... Try again!!");
-            this.experience(0);
-            this.isFighting(false);
+            this.lose();
         }
     };
 
